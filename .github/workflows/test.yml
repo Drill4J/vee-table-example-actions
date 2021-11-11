@@ -1,0 +1,34 @@
+# DO NOT put this action into COMPONENTS's repository (it's added here just for example sake)
+# DO put it into repository with your E2E tests
+name: Run tests and send results
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - 'main'
+
+jobs:
+  publish:
+    name: Publish awesome artifact
+    runs-on: ubuntu-latest
+    steps:
+      # - name: 'checkout'
+      #   uses: actions/checkout@v2
+      - id: 'run_tests'
+        run: |
+          echo "::set-output name=setup_id::single-java-agent"
+          echo "::set-output name=status::failed"
+          echo ::set-output name=env::'{"admin-backend":"0.8.0","admin-ui":"0.8.0"}'
+      - uses: RomanDavlyatshin/vvv-github-action@0.0.5
+        with:
+          github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
+          action-type: 'add-test-result'
+
+          ledger-repo-url: 'https://github.com/RomanDavlyatshin/ledger'
+          ledger-repo-owner: 'RomanDavlyatshin'
+          ledger-repo-name: 'ledger'
+
+          test-setup-id: steps.run_tests.outputs.setup_id
+          test-status: steps.run_tests.outputs.status
+          test-component-version-map: steps.run_tests.outputs.env
