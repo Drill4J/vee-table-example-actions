@@ -12,7 +12,7 @@ jobs:
     steps:
       # uses: actions/checkout@v2
       # id: build_artifact
-      - uses: RomanDavlyatshin/vvv-github-action@0.0.2
+      - uses: RomanDavlyatshin/vvv-github-action@0.0.3
         with:
           github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
           action-type: 'add-version'
