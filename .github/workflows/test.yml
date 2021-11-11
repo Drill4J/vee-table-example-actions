@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "::set-output name=setup_id::single-java-agent"
           echo "::set-output name=status::failed"
-          echo ::set-output name=env::'{"admin-backend":"0.8.0","admin-ui":"0.8.0"}'
+          echo ::set-output name=env::'{"admin-backend":"0.8.1-10","admin-ui":"0.8.2-21"}'
       - uses: RomanDavlyatshin/vvv-github-action@0.0.5
         with:
           github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
