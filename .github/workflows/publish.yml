@@ -14,7 +14,7 @@ jobs:
       # id: build_artifact
       - uses: RomanDavlyatshin/vvv-github-action@0.0.1
         with:
-          github-access-token: ${{ secrets.GITHUB_ACCESS_TOKEN }} # supply your personal token
+          github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
           action-type: 'add-version'
           version-component-id: 'improved-rotary-phone'
           version-tag: '1.2.3' # steps.build_artifact.outputs.version
