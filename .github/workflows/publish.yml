@@ -16,5 +16,8 @@ jobs:
         with:
           github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
           action-type: 'add-version'
+          ledger-repo-url: 'https://github.com/RomanDavlyatshin/ledger'
+          ledger-repo-owner: 'RomanDavlyatshin'
+          ledger-repo-name: 'ledger'
           version-component-id: 'improved-rotary-phone'
           version-tag: '1.2.3' # steps.build_artifact.outputs.version
