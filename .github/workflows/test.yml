@@ -29,6 +29,6 @@ jobs:
           ledger-repo-owner: 'RomanDavlyatshin'
           ledger-repo-name: 'ledger'
 
-          test-setup-id: steps.run_tests.outputs.setup_id
-          test-status: steps.run_tests.outputs.status
-          test-component-version-map: steps.run_tests.outputs.env
+          test-setup-id: ${{ steps.run_tests.outputs.setup_id }}
+          test-status: ${{ steps.run_tests.outputs.status }}
+          test-component-version-map: ${{ steps.run_tests.outputs.env }}

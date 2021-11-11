@@ -27,5 +27,5 @@ jobs:
           ledger-repo-owner: 'RomanDavlyatshin'
           ledger-repo-name: 'ledger'
           
-          version-component-id: steps.build_artifact.outputs.name
-          version-tag: steps.build_artifact.outputs.version
+          version-component-id: ${{ steps.build_artifact.outputs.name }}
+          version-tag: ${{ steps.build_artifact.outputs.version }}
