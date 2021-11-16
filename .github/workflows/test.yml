@@ -3,11 +3,7 @@
 name: Run tests and send results
 
 on:
-  repository_dispatch:
-    inputs:
-      setup_id:
-        description: 'Setup to run tests for'
-        required: true
+  workflow_dispatch:
 
 jobs:
   publish:
