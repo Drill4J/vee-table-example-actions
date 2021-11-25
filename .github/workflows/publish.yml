@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "::set-output name=name::improved-rotary-phone"
           echo "::set-output name=version::3.4.5"
-      - uses: RomanDavlyatshin/vvv-github-action@0.0.5
+      - uses: RomanDavlyatshin/vee-table@0.0.0
         with:
           github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
           action-type: 'add-version'
