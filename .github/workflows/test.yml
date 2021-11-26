@@ -22,9 +22,9 @@ jobs:
           github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
           action-type: 'add-test-result'
 
-          ledger-repo-url: 'https://github.com/RomanDavlyatshin/ledger'
-          ledger-repo-owner: 'RomanDavlyatshin'
-          ledger-repo-name: 'ledger'
+          ledger-repo-url: 'https://github.com/Drill4J/vee-ledger'
+          ledger-repo-owner: 'Drill4J'
+          ledger-repo-name: 'vee-ledger'
 
           test-setup-id: ${{ steps.run_tests.outputs.setup_id }}
           test-status: ${{ steps.run_tests.outputs.status }}
