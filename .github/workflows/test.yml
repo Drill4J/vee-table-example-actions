@@ -20,6 +20,7 @@ jobs:
           echo ::set-output name=env::'{"improved-rotary-phone":"1.0.0-1"}'
       # MOCK - example test run step
       
+      # place this action LAST
       - uses: Drill4J/vee-table@0.0.0
         with:
           # leave everything "as-is"
@@ -31,5 +32,6 @@ jobs:
           test-setup-id: ${{ github.event.repository.name }}
           # leave everything "as-is"
 
-          test-status: ${{ steps.*YOUR TEST STEP NAME*.outputs.status }} # 1. Pass test status (any string)
-          test-component-version-map: ${{ steps.*YOUR TEST STEP NAME*.outputs.env }} # 2. Pass JSON with componentId:version. Example: {"admin": "0.8.0", "admin-root-config": "0.8.1", "test2code-ui": "0.8.3"}
+          # steps.run_tests is your test step name (defined above)
+          test-status: ${{ steps.run_tests.outputs.status }} # 1. Pass test status (any string)
+          test-component-version-map: ${{ steps.run_tests.outputs.env }} # 2. Pass JSON with componentId:version. Example: {"admin": "0.8.0", "admin-root-config": "0.8.1", "test2code-ui": "0.8.3"}

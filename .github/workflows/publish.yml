@@ -17,6 +17,7 @@ jobs:
           echo "::set-output name=version::3.4.5"
       # MOCK - example build step
 
+      # place this action LAST
       - uses: Drill4J/vee-table@0.0.0
         with:
           # leave everything "as-is"
@@ -28,4 +29,5 @@ jobs:
           version-component-id: ${{ github.event.repository.name }}
           # leave everything "as-is"
 
-          version-tag: ${{ steps.*YOUR BUILD STEP NAME*.outputs.version }} # Pass new version tag
+          # steps.build_artifact is your step, where new version tag is created
+          version-tag: ${{ steps.build_artifact.outputs.version }} # Pass new version tag
