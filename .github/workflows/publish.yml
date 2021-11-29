@@ -20,13 +20,13 @@ jobs:
           echo "::set-output name=version::3.4.5"
       - uses: Drill4J/vee-table@0.0.0
         with:
-          github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
+          # leave everything "as-is"
+          github-access-token: ${{ secrets.VEE_TABLE_TOKEN }}
           action-type: 'add-version'
-          
           ledger-repo-url: 'https://github.com/Drill4J/vee-ledger'
           ledger-repo-owner: 'Drill4J'
           ledger-repo-name: 'vee-ledger'
-          
           version-component-id: ${{ github.event.repository.name }}
-          # version-component-id: ${{ steps.build_artifact.outputs.name }}
-          version-tag: ${{ steps.build_artifact.outputs.version }}
+          # leave everything "as-is"
+
+          version-tag: ${{ steps.*YOUR BUILD STEP NAME*.outputs.version }} # Pass new version tag

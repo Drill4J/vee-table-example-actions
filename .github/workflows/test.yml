@@ -19,14 +19,14 @@ jobs:
           echo ::set-output name=env::'{"improved-rotary-phone":"1.0.0-1"}'
       - uses: Drill4J/vee-table@0.0.0
         with:
-          github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
+          # leave everything "as-is"
+          github-access-token: ${{ secrets.VEE_TABLE_TOKEN }}
           action-type: 'add-test-result'
-
           ledger-repo-url: 'https://github.com/Drill4J/vee-ledger'
           ledger-repo-owner: 'Drill4J'
           ledger-repo-name: 'vee-ledger'
-
-          # test-setup-id: ${{ steps.run_tests.outputs.setup_id }}
           test-setup-id: ${{ github.event.repository.name }}
-          test-status: ${{ steps.run_tests.outputs.status }}
-          test-component-version-map: ${{ steps.run_tests.outputs.env }}
+          # leave everything "as-is"
+
+          test-status: ${{ steps.*YOUR TEST STEP NAME*.outputs.status }} # 1. Pass test status (any string)
+          test-component-version-map: ${{ steps.*YOUR TEST STEP NAME*.outputs.env }} # 2. Pass JSON with componentId:version. Example: {"admin": "0.8.0", "admin-root-config": "0.8.1", "test2code-ui": "0.8.3"}
