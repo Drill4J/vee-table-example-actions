@@ -14,9 +14,9 @@ jobs:
       #   uses: actions/checkout@v2
       - id: 'run_tests'
         run: |
-          echo "::set-output name=setup_id::single-java-agent"
+          echo "::set-output name=setup_id::example"
           echo "::set-output name=status::failed"
-          echo ::set-output name=env::'{"admin-backend":"0.8.1-10","admin-ui":"0.8.2-21", "java-agent":"0.8.0-12", "java-autotest-agent":"0.8.2-15"}'
+          echo ::set-output name=env::'{"improved-rotary-phone":"1.0.0-1"}'
       - uses: Drill4J/vee-table@0.0.0
         with:
           github-access-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }} # supply your personal token
