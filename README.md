@@ -1,3 +1,6 @@
 # VeeTable Integration Example
 
-It's a placeholder repo created for GH Action testing, nothing to see here
+See [.github/workflow](.github/workflows) for examples:
+
+- [Component repository integration](.github/workflows/publish.yml)
+- [E2E tests repository integration](.github/workflows/test.yml)
