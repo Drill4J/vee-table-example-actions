@@ -1,3 +1,4 @@
+# Put this into individual component repositories
 name: Publish version
 on:
   # just for EXAMPLE

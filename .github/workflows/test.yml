@@ -1,6 +1,4 @@
-# THIS IS EXAMPLE
-# _DO NOT_ put this action into COMPONENTS's repository
-# YOU MUST put it into repository with your _E2E tests_
+# Put this into repository with your _E2E tests_
 name: Run tests
 
 on:
