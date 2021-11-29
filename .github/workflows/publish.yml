@@ -27,5 +27,6 @@ jobs:
           ledger-repo-owner: 'Drill4J'
           ledger-repo-name: 'vee-ledger'
           
-          version-component-id: ${{ steps.build_artifact.outputs.name }}
+          version-component-id: ${{ github.event.repository.name }}
+          # version-component-id: ${{ steps.build_artifact.outputs.name }}
           version-tag: ${{ steps.build_artifact.outputs.version }}
