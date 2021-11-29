@@ -1,23 +1,21 @@
-name: Build & publish awesome artifact
+name: Publish version
 on:
+  # just for EXAMPLE
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - 'main'
+  # just for EXAMPLE
 
 jobs:
   publish:
     name: Publish awesome artifact
     runs-on: ubuntu-latest
     steps:
-      # - name: 'checkout'
-      #   uses: actions/checkout@v2
-      # - name: 'build'
-      #   id: 'build_artifact'
+      # MOCK - example build step
       - id: 'build_artifact'
         run: |
           echo "::set-output name=name::improved-rotary-phone"
           echo "::set-output name=version::3.4.5"
+      # MOCK - example build step
+
       - uses: Drill4J/vee-table@0.0.0
         with:
           # leave everything "as-is"
